@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  php-multi-image-compress-dev:
+    container_name: php-multi-image-compress-dev
+    build: .
+    ports:
+      - 6969:80
+    volumes:
+      - ./:/opt/php-multi-image-compress
+    command: ["php", "-S" , "0.0.0.0:80", "-t", "/opt/php-multi-image-compress"]
+
+networks:
+  default:
+    external:
+      name: php-multi-image-compress-network
