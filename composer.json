@@ -6,7 +6,7 @@
         {
             "name": "Roger Russel",
             "email": "roger@rrussel.org"
-        },
+        }
   ],
   "license": "Apache-2.0",
   "autoload": {
