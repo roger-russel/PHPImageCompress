@@ -9,11 +9,11 @@
 
    public static function compress($full_image_path){
 
-     $compress_command = GUETZLI . " --quality " . self::GUETZLI_QUALITY . " $full_image_path $full_image_path.compressed";
+     $compress_command = __OPT__ . "/guetzli --quality " . self::GUETZLI_QUALITY . " $full_image_path $full_image_path.compressed";
      exec($compress_command);
 
      if(!is_file($full_image_path .'.compressed')){
-       $recompress = JPEGRECOMPRESS . " --quiet --accurate --quality high --min " . self::JPEGE_RECOMPRESS_MIN . " -m ms-ssim $full_image_path $full_image_path.compressed";
+       $recompress = __OPT__ . "/jpeg-recompress --quiet --accurate --quality high --min " . self::JPEGE_RECOMPRESS_MIN . " -m ms-ssim $full_image_path $full_image_path.compressed";
        exec($recompress);
      }
 
