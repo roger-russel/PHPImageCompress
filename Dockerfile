@@ -22,3 +22,6 @@ RUN php -r "unlink('composer-setup.php');"
 
 RUN pecl install xdebug \
 && docker-php-ext-enable xdebug
+
+RUN docker-php-ext-install \
+  exif
