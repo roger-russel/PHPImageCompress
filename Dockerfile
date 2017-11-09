@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
   libpng-dev \
   zlib1g-dev \
   build-essential \
+  automake \
   && rm -rf /var/lib/apt/lists/*
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"

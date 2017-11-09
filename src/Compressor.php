@@ -5,6 +5,8 @@ namespace PhpMultiImageCompress;
 require __DIR__ . '/bootstrap.php';
 
 use PhpMultiImageCompress\Format\Jpeg;
+use PhpMultiImageCompress\Format\Gif;
+use PhpMultiImageCompress\Format\Png;
 
 Class Compressor {
 
@@ -15,10 +17,10 @@ Class Compressor {
         Jpeg::compress($full_image_path);
         break;
       case IMAGETYPE_PNG:
-
+        Png::compress($full_image_path);
         break;
       case IMAGETYPE_GIF:
-
+        Gif::compress($full_image_path);
         break;
     }
   }
