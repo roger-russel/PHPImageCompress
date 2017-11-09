@@ -1,8 +1,8 @@
 <?php
 
-require __DIR__ . '/bootstrap.php';
-
 namespace PhpMultiImageCompress;
+
+require __DIR__ . '/bootstrap.php';
 
 use PhpMultiImageCompress\Format;
 
