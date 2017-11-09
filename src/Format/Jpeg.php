@@ -4,11 +4,11 @@
 
  class Jpeg implements iFormat {
 
-   protected $guetzili_quality = 84;
+   const GUETZLI_QUALITY = 84;
 
    public static function compress($full_image_path){
 
-     $compress_command = GUETZLI . " --quality {$this->guetzili_quality} $full_image_path $full_image_path.compressed";
+     $compress_command = GUETZLI . " --quality " . self::GUETZLI_QUALITY . " $full_image_path $full_image_path.compressed";
      exec($compress_command);
 
      if(!is_file($full_image_path .'.compressed'))
