@@ -1,8 +1,10 @@
 <?php
 
+namespace PhpMultiImageCompress\Format;
+
 interface iFormat {
 
-  public static compress($full_image_path);
+  public static function compress($full_image_path);
 
 
 }
