@@ -2,8 +2,6 @@
 
 namespace PhpMultiImageCompress;
 
-require __DIR__ . '/bootstrap.php';
-
 use PhpMultiImageCompress\Format\Jpeg;
 use PhpMultiImageCompress\Format\Gif;
 use PhpMultiImageCompress\Format\Png;
