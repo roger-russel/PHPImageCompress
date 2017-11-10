@@ -6,6 +6,8 @@ use PhpMultiImageCompress\Format\Jpeg;
 use PhpMultiImageCompress\Format\Gif;
 use PhpMultiImageCompress\Format\Png;
 
+define('__OPT__', realpath(__DIR__ . '/../opt'));
+
 Class Compressor {
 
   public function it($full_image_path){
